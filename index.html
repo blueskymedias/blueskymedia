@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- Font Awesome Icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Bluesky media</title>
+  </head>
+  <body>
+    <header>
+      <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+      <div class="container-nav">
+          <div class="logo">
+              <a href="#" title="Logo">
+                  <img src="assets/logopng.png" alt="Restaurant Logo" class="img-responsive" >
+              </a>
+          </div>
+
+          <div class="menu text-right">
+              <ul>
+                  <li>
+                      <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                      <a href="categories.html">Abouts us</a>
+                  </li>
+                  <li>
+                      <a href="category-foods.html">Roadmap</a>
+                  </li>
+                  <li>
+                      <a id="openPopup-contact">Contact</a>
+                      <div id="popup-contact" class="popup-contact">
+                        <div class="popup-content">
+                            <span class="close" id="closePopup-contact">&times;</span>
+                            <h2>Contact Us</h2>
+                            <form id="contactForm">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                                
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" required></textarea>
+                                
+                                <button class="button-contact"   type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                
+                  </li>
+              </ul>
+          </div>
+
+       
+      </div>
+  </section>
+  <!-- Navbar Section Ends Here -->
+
+
+  <!--hero section-->
+
+      <div class="section__container header__container" id="home">
+        <div class="header__content">
+          <h1>
+            Welcome to Blue Sky Media</h1>
+            <div class="container-textanimastion">
+              <span class="text first-text">I'm a</span>
+              <span class="text sec-text">Freelancer</span>
+          </div>
+      
+         
+          <p>
+            where innovation and creativity drive digital success.
+            Let's create magic together! Contact us today!"
+          </p>
+          <button class="btn">See Services</button>
+        </div>
+
+        <div class="header__img">
+        <img src="assets/newlogopng.png" alt="" width="500px">
+        </div>
+      </div>
+    </header>
+
+<!--hero section end-->
+
+
+
+<!--cards slider-->
+
+<div class="scroller" data-speed="fast">
+    <ul class="tag-list scroller__inner">
+
+        <div class="card" onclick="togglePopup('Social Media Management', 'We can aid in creating and scheduling posts,\n responding to comments, for your social media platforms.!', 'assets/social-media (1).png')">
+            <img src="assets/social-media (1).png" alt="Avatar" style="width:60px">
+            <div class="container-card">
+              <p>Social Media Management</p> 
+            </div>
+          </div>
+
+
+
+
+            <div class="card" onclick="togglePopup('Digital Advertising', 'We can assist with creating and managing online ad campaigns,\n including Google Ads, Facebook Ads, and Instagram Ads.', 'assets/digital advertising 2.png')" >
+                <img src="assets/7632702_advertising_marketing_management_business_icon.png" alt="Avatar" style="width:60px">
+                <div class="container-card">
+                  <p>Digital Advertising</p> 
+                </div>
+              </div>
+
+          
+
+            
+              <div class="card" onclick="togglePopup('website Design', 'We can offer suggestions for improving your websites user experience,\n conversion rates and overall performance.', 'assets/website Design2.png')">
+                <img src="assets/4263525_builder_code_design_monitor_website_icon.png" alt="Avatar" style="width:60px">
+                <div class="container-card">
+                  <p>website Design</p> 
+                </div>
+              </div>
+
+              <div class="card" onclick="togglePopup('Influencer Research', 'We can aid in finding and researching potential influencers \nfor partnerships or collaborations.', 'assets/inflancer2.png')">
+                <img src="assets/Influencer.png" alt="Avatar" style="width:60px">
+                <div class="container-card">
+                  <p>Influencer Research</p> 
+                </div>
+              </div>
+
+              
+              <div class="card" onclick="togglePopup('Image and Video Editing', 'We can create and edit the videos and images for Social Media', 'assets/film-editing2.png')">
+                <img src="assets/film-editing (1).png" alt="Avatar" style="width:60px">
+                <div class="container-card">
+                  <p>Image and Video Editing</p> 
+                </div>
+              </div>
+      
+
+
+              <div id="popup-services" class="popup-services">
+                <div class="popup-content-services">
+                    <span class="close-services" onclick="togglePopup()">&times;</span>
+                    <h3 id="popup-title">Popup Title</h3>
+                    <p id="popup-description">This is the popup content!</p>
+                    <img id="popup-image" src="" alt="Popup Image">
+                </div>
+            </div>
+    </ul>
+  </div>
+  
+<!--about us-->
+
+<div class="about-us">
+  <div class="container-abouts">
+      <div class="row-abouts">
+          <div class="flex-abouts">
+              <h2>About us</h2>
+              <h3>DIGITAL MARKETING</h3>
+              <p>At Blue sky media, we're a team of digital pros who blend innovation with creativity to help businesses thrive online. With a focus on collaboration, transparency, and top-notch results, we're here to make your brand shine in the digital world. Let's create something amazing together – reach out to us today!
+              </p>
+              <div class="social-links-abouts">
+                   <a href=""><img src="assets/3225191_app_instagram_logo_media_popular_icon.png" width="38px"></a>
+                   <a href=""><img src="assets/5296499_fb_facebook_facebook logo_icon.png" width="38px"></a>
+              </div>
+            
+          </div>
+          <div class="flex-abouts">
+              <div class="about-img">
+              <img src="assets/aboutimg.jpg" width="600px">
+          </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--about us end-->
+
+<!--road map time line-->
+
+<div class="main-timeline">
+  <h3 class="head-timeline">Roadmap</h3>
+  <div class="container-timeline">
+      <ul>
+          <li>
+              <h3 class="heading-timeline">Photoshoot</h3>
+              <p>The First step is to make Photoshoot such as ambiance of the restarent and the products. </p>
+              <span class="date">Step 1</span>
+              <span class="circle"></span>
+          </li>
+          <li>
+              <h3 class="heading-timeline">Image and Video Editing</h3>
+              <p>We can create and edit the videos and images for Social Media.</p>
+              <span class="date">Step 2</span>
+              <span class="circle"></span>
+          </li>
+          <li>
+              <h3 class="heading-timeline">Socia media Managment</h3>
+              <p>We can scheduling posts in social media and get help to reach to people.</p>
+              <span class="date">Step 3</span>
+              <span class="circle"></span>
+          </li>
+          <li>
+              <h3 class="heading-timeline">Markinting</h3>
+              <p>the finaly step is to reaching the product to the people with the help of Google Ads, Facebook Ads, and Instagram Ads.</p>
+              <span class="date">Step 4</span>
+              <span class="circle"></span>
+          </li>
+      </ul>
+  </div>
+</div>
+<!--roadmap end-->
+
+
+<!-- our works cards-->
+<h3 class="head-ourwork">Our works</h3>
+<div class="card-list">
+
+  <a href="pages/images gallery/index.html" class="card-item">
+      <img src="assets/photo.jpg" alt="Card Image">
+      <span class="developer">Photo Editing</span>
+      <h3>We are creating or editing photos for social media, it helps to reach the people on social media. For an demo click the more.</h3>
+      <div class="arrow">
+          <i class="fas fa-arrow-right card-icon"></i>
+      </div>
+  </a>
+  <a href="pages/Video gallery light box/index.html" class="card-item">
+      <img src="assets/video editing.webp" alt="Card Image">
+      <span class="designer">Video Editing</span>
+      <h3>We are creating or editing videos for social media, it helps to reach the people on social media. For an demo click the more.</h3>
+      <div class="arrow">
+          <i class="fas fa-arrow-right card-icon"></i>
+      </div>
+  </a>
+  <a href="pages/website gallery/webdemo.html" class="card-item">
+      <img src="assets/webdesgin.jpeg" alt="Card Image">
+      <span class="editor">Web Desgin</span>
+      <h3>We are desging user-friendly and responsive websites for your business growth, such as protifolio websites, hospital websites, restaurant menu sites etc.. For an demo click the more.</h3>
+      <div class="arrow">
+          <i class="fas fa-arrow-right card-icon"></i>
+      </div>
+  </a>
+</div>
+
+<!--our wroks end-->
+
+<!--footer-->
+<div class="footer">
+<h5>copyright ©2024. designed by Praveen</h5>
+</div>
+<!--end-->
+
+<!--js-->
+
+<!--text animation-->
+
+    <script>
+      const text = document.querySelector(".sec-text");
+
+      const textLoad = () => {
+          setTimeout(() => {
+              text.textContent = "Digital Markinting";
+          }, 0);
+          setTimeout(() => {
+              text.textContent = "social Media Managment";
+          }, 4000);
+          setTimeout(() => {
+              text.textContent = "Web Design";
+          }, 8000);
+          setTimeout(() => {
+              text.textContent = "Advertising";
+          }, 10000); //1s = 1000 milliseconds
+      }
+
+      textLoad();
+      setInterval(textLoad, 12000);
+  </script>
+
+<!--popup contact us-->
+
+    <script>
+
+function togglePopup(title = '', description = '', imageSrc = '') {
+    const popup = document.getElementById("popup-services");
+    const popupTitle = document.getElementById("popup-title");
+    const popupDescription = document.getElementById("popup-description");
+    const popupImage = document.getElementById("popup-image");
+
+    if (title) {
+        popupTitle.innerText = title;
+        popupDescription.innerText = description;
+        popupImage.src = imageSrc;
+        popup.style.display = "flex";
+    } else {
+        popup.style.display = "none";
+    }
+}
+
+// Close popup when clicking outside
+window.onclick = function(event) {
+    const popup = document.getElementById("popup-services");
+    if (event.target === popup) {
+        popup.style.display = "none";
+    }
+}
+
+    </script>
+
+
+
+<script>
+
+
+  // Get elements
+const openPopupContact = document.getElementById('openPopup-contact');
+const popupContact = document.getElementById('popup-contact');
+const closePopupContact = document.getElementById('closePopup-contact');
+const contactForm = document.getElementById('contactForm');
+
+// Function to open the popup
+openPopupContact.addEventListener('click', () => {
+    popupContact.style.display = 'block';
+});
+
+// Function to close the popup
+closePopupContact.addEventListener('click', () => {
+    popupContact.style.display = 'none';
+});
+
+// Close the popup if user clicks outside of it
+window.addEventListener('click', (event) => {
+    if (event.target === popupContact) {
+        popupContact.style.display = 'none';
+    }
+});
+
+// Handle form submission
+contactForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
+
+    // Gather form data
+    const formData = new FormData(contactForm);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
+
+    // You can add your form submission logic here
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Message:', message);
+
+    // Optionally, close the popup after submission
+    popupContact.style.display = 'none';
+    
+    // Clear the form
+    contactForm.reset();
+});
+
+</script>
+<script src="scrollable.js"></script>
+    
+  </body>
+</html>
