@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>abouts</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/abouts.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+  </head>
+  <body>
+
+
+    
+<a href="../../../webdemo.html" class="floating-btn">
+  <img src="imgs/back.png" alt="Floating Button" width="40px">
+</a>
+    <!--navbar-->
+ 
+
+    <div class="header-nav" data-aos="fade-down">
+      <h1 href="" class="logo">Sai hospital</h1>
+      <input type="checkbox" id="check">
+      <label for="check" class="icons">
+          <img src="menu icon.png" id="menu-icon" width="30px">
+          <img src="x icons.png" id="close-icon" width="30px">
+      </label>
+      <nav class="navbar">
+          <a href="../index.html"style="--i:0;">Home</a>
+          <a href="abouts.html"style="--i:1;">Abouts</a>
+          <a href="team.html"style="--i:1;">Team</a>
+          <a href="services.html"style="--i:3;">Services</a>
+          <a href="contact.html"style="--i:4;">Contact</a>
+      </nav>
+  </div>
+
+      <!--about as-->
+  <div class="container" data-aos="zoom-In">
+    <div class="wrapper">
+        <div class="content" data-aos="fade-right">
+            <h2> Abouts</h2>
+            <p>Welcome to [Dental Hospital Name], where your oral health and smile are our top priorities. Since [year established], we have been dedicated to providing exceptional dental care in [location]. Our state-of-the-art facility and expert team ensure that every patient receives personalized treatment in a comfortable and caring environment.</p><br>
+           <h2>Our History</h2>
+           <p>Founded in [year], [Dental Hospital Name] has a rich history of serving the [city/region] community with integrity and excellence in dental care. Over the years, we have grown to become a trusted name in oral health, known for our commitment to quality and patient satisfaction.</p>
+           <h2> Our Mission</h2>
+           <p>At [Dental Hospital Name], our mission is to enhance the oral health and overall well-being of our patients by delivering outstanding dental care in a welcoming and compassionate environment. We strive to build lasting relationships based on trust, integrity, and exceptional results.</p>
+           <h2>Our Values</h2>
+           <p>Patient-Centered Care: We prioritize your comfort and strive to exceed your expectations at every visit.</p>
+          <p><span>Quality:</span> We adhere to the highest standards of dental excellence and continuously seek to improve our practices.</p> 
+          <p><span>Integrity:</span> We are transparent in our treatments and recommendations, ensuring you receive honest and ethical care.</p>
+          <p><span>Innovation:</span> We embrace advanced technology and techniques to deliver superior dental outcomes.</p>
+        </div>
+        <div class="image" data-aos="fade-left">
+            <img src="imgs/aboutsimg.jpg" width="600px" class="img-card">
+        </div>
+    </div>
+    
+</div>
+
+  
+     
+   
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 2500,
+    once: true,
+  });
+  </script>
+
+<script>
+  document.addEventListener("contextmenu", (e) =>{
+    e.preventDefault()
+    return false
+    
+  
+  })
+  document.addEventListener('keydown',(e) =>{
+    if(e.ctrlKey || e.keyCode ==123){
+      e.stopPropagation()
+      e.preventDefault()
+    }
+    })
+  </script>
+  </body>
+</html>

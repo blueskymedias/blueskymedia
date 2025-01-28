@@ -1,0 +1,587 @@
+
+/*nav style*/
+.header-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem 10%;
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.header-nav::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+background: whitesmoke;
+  
+  z-index: -1;
+}
+
+.header-nav a:hover{
+  color:black;
+  border-bottom-style:solid ; 
+ border-bottom-color:#f15b43 ;
+ transform: 1s;
+}
+
+.logo{
+  font-size: 1.5rem;
+  color:black;
+  text-decoration: none;
+  font-weight: 700;
+}
+.navbar a{
+  font-size: 1.15rem;
+  color: black;
+  text-decoration: none;
+  font-weight: 500 bold;
+  margin-left: 2.5rem;
+  transition: 0.6s;
+
+}
+#check{
+  display: none;
+}
+.icons{
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+  display:none;
+}
+/*breakpoint*/
+@media (max-width:992px) {
+  .header-nav{
+    padding: 1.3rem 5%;
+
+  }
+  
+}
+@media (max-width:768px)
+{
+.icons{
+  display: inline-flex;
+}
+#check:checked~.icons #menu-icon{
+  display: none;
+}
+#check:checked~.icons #close-icon{
+  display: block;
+}
+.icons #close-icon{
+  display: none;
+}
+.navbar{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height:0;
+background:whitesmoke;
+  
+  box-shadow: 0.5rem 1rem rgba(0, 0, 0,.1);
+  transition: .3s ease;
+  overflow: hidden;
+}
+#check:checked~.navbar{
+ height: 17.7rem;
+}
+.navbar a{
+  display: block;
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: .3s ease;
+}
+#check:checked~.navbar a{
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay:calc(.15s * var(--i));
+}
+}
+/*end*/
+
+
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+}
+
+.card__container {
+  display: grid;
+  row-gap: 3.5rem;
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 328px;
+  border-radius: 1.5rem;
+}
+
+.card__data {
+  width: 280px;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+/* Naming animations in hover */
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .card__data {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 100vh;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__img {
+    width: 348px;
+  }
+  .card__data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
+
+
+
+
+
+/*footer*/
+
+.content1{
+  position: relative;
+  
+  margin: 130px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.content1 .text{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+.content1 .p{
+  font-size: 2.1875rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+footer{
+
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+}
+
+@media  (min-width:1024px) {
+  footer{
+margin-top: 73%;
+    bottom: 0px;
+    width: 100%;
+    background: #111;
+  }
+  
+}
+@media  (min-width:1300px) {
+  footer{
+margin-top: 10%;
+    bottom: 0px;
+    width: 100%;
+    background: #111;
+  }
+  
+}
+@media  (min-width:1120px) {
+  footer{
+margin-top: 80%;
+   
+  }
+  
+}
+
+@media  (min-width:1350px) {
+  footer{
+margin-top: 50%;
+    
+  }
+}
+@media  (min-width:1400px) {
+  footer{
+margin-top: 65%;
+    
+  }
+}
+@media  (min-width:2000px) {
+  footer{
+margin-top: 40%;
+    
+  }
+}
+@media  (min-width:3000px) {
+  footer{
+margin-top: 10%;
+    
+  }
+}
+@media  (max-width:1024px) {
+  footer{
+    margin-top: 10%;
+    bottom: 0px;
+    width: 100%;
+    background: #111;
+  }
+  
+}
+.main-content{
+  display: flex;
+}
+.main-content .box-footer{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box-footer h2{
+  color: whitesmoke;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box-footer .content-footer{
+  margin: 20px 0 0 0;
+  position: relative;
+  color: whitesmoke;
+}
+.box-footer .content-footer:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box-footer .content-footer:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #f12020;
+  top: -10px;
+}
+.left .content-footer p{
+  text-align: justify;
+}
+.left .content-footer .social-footer{
+  margin: 20px 0 0 0;
+}
+.left .content-footer .social-footer a{
+  padding: 0 2px;
+}
+.left .content-footer .social-footer a span{
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content-footer .social-footer a span:hover{
+  background: #f12020;
+}
+.center .content-footer .fas{
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content-footer .fas:hover{
+  background: #f12020;
+}
+.center .content-footer .text-footer{
+  color: whitesmoke;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content-footer .phone-footer{
+  margin: 15px 0;
+}
+.right form .text-footer{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+.right form .msg{
+  margin-top: 10px;
+}
+.right form input, .right form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+.right form input:focus,
+.right form textarea:focus{
+  outline-color: #3498db;
+}
+.right form input{
+  height: 35px;
+}
+.right form .btn-footer{
+  margin-top: 10px;
+}
+.right form .btn-footer button{
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f12020;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+.right form .btn-footer button:hover{
+  background: #000;
+}
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span{
+  color: #656565;
+}
+.bottom center a{
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom center a:hover{
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box-footer{
+    margin: 5px 0;
+  }
+}
+
+
+
+
+/* Floating button styling */
+.floating-btn {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  right: 20px;  /* Distance from the right of the viewport */
+  width: 60px;  /* Width of the button */
+  height: 60px; /* Height of the button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Background color of the button */
+  border-radius: 50%; /* Makes the button circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+  text-decoration: none;
+  z-index: 1000; /* Ensures the button is above other content */
+}
+
+.floating-btn img {
+  width: 30px; /* Size of the icon */
+  height: 30px; /* Size of the icon */
+}
+
+/* Hover effect */
+.floating-btn:hover {
+  background-color: #b6b6b6; /* Darker color on hover */
+}
+
+

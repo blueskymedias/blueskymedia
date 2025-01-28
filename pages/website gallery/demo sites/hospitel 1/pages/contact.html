@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Contact Us Form | CodingLab</title>
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+/* Optional: CSS for styling the form and popup */
+.form-popup {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #f1f1f1;
+        border: 1px solid #d3d3d3;
+        padding: 10px;
+        z-index: 1000;
+    }
+  </style>
+  <body>
+
+        <!--navbar-->
+ 
+
+        <div class="header-nav" data-aos="fade-down">
+          <h1 href="" class="logo">name hospital</h1>
+          <input type="checkbox" id="check">
+          <label for="check" class="icons">
+              <img src="menu icon.png" id="menu-icon" width="30px">
+              <img src="x icons.png" id="close-icon" width="30px">
+          </label>
+          <nav class="navbar">
+              <a href="../index.html"style="--i:0;">Home</a>
+              <a href="abouts.html"style="--i:1;">Abouts</a>
+              <a href="team.html"style="--i:1;">Team</a>
+              <a href="services.html"style="--i:3;">Services</a>  
+              <a href="contact.html"style="--i:4;">Contact</a>
+          </nav>
+      </div>
+
+
+
+      <div class="form-popup" id="successPopup">
+        <p>Message sent successfully!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+      
+      
+      
+      
+      <div class="container">
+      <div class="content">
+        <div class="left-side">
+          <div class="address details" data-aos="fade-right">
+         <img src="imgs/maps-and-flags.png" alt="" width="30px"> 
+            <div class="topic">Address</div>
+            <div class="text-one">Surkhet, NP12</div>
+            <div class="text-two">Birendranagar 06</div>
+          </div>
+          <div class="phone details" data-aos="fade-right">
+           <img src="imgs/call.png" alt="" width="30px">
+            <div class="topic">Phone</div>
+            <div class="text-one">+0098 9893 5647</div>
+            <div class="text-two">+0096 3434 5678</div>
+          </div>
+          <div class="email details"data-aos="fade-right">
+            <img src="imgs/email.png" alt="" width="30px">
+            <div class="topic">Email</div>
+            <div class="text-one">codinglab@gmail.com</div>
+            <div class="text-two">info.codinglab@gmail.com</div>
+          </div>
+        </div>
+        <div class="right-side"data-aos="fade-down">
+          <div class="topic-text">Send us a message</div>
+         
+          <form  data-aos="fade-down" id="contactForm" onsubmit="submitForm(event)">
+            <div class="input-box">
+              <input type="text"id="name" name="name" required placeholder="Enter your name" />
+            </div>
+            <div class="input-box">
+              <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="Enter your phone number" />
+            </div>
+            <div class="input-box message-box">
+              <textarea  id="message" name="message"  required placeholder="Enter your message"></textarea>
+            </div>
+            <div class="button">
+              
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!--footer-->
+
+
+
+
+<footer data-aos="fade-up">
+  <div class="main-content">
+    <div class="left box-footer">
+      <h2>About us</h2>
+      <div class="content-footer">
+        <p>CodinNepal is a YouTube channel where you can learn web designing, web development, ui/ux designing, html css tutorial, hover animation and effects, javascript and jquery tutorial and related so on.</p>
+        <div class="social-footer">
+          <a href="https://facebook.com/coding.np"><span class="fab fa-facebook-f"></span></a>
+          <a href="#"><span class="fab fa-twitter"></span></a>
+          <a href="https://instagram.com/coding.np"><span class="fab fa-instagram"></span></a>
+          <a href="https://youtube.com/c/codingnepal"><span class="fab fa-youtube"></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="center box-footer">
+      <h2>Address</h2>
+      <div class="content-footer">
+        <div class="place">
+          <span class="fas fa-map-marker-alt"></span>
+          <span class="text-footer">Birendranagar, Surkhet</span>
+        </div>
+        <div class="phone-footer">
+          <span class="fas fa-phone-alt"></span>
+          <span class="text-footer">+089-765432100</span>
+        </div>
+        <div class="email-footer">
+          <span class="fas fa-envelope"></span>
+          <span class="text-footer">abc@example.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="right box-footer">
+      <h2>Contact us</h2>
+      <div class="content-footer">
+        <form action="#">
+          <div class="email-footer">
+            <div class="text-footer">Email *</div>
+            <input type="email" required>
+          </div>
+          <div class="msg">
+            <div class="text-footer">Message *</div>
+            <textarea rows="2" cols="25" required></textarea>
+          </div>
+          <div class="btn-footer">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <center>
+      <span class="credit">Created By Praveen | </span>
+      <span class="far fa-copyright"></span><span> 2024 All rights reserved.</span>
+    </center>
+  </div>
+</footer>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="contact.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 2500,
+    once: true,
+  });
+  </script>
+
+<a href="../../../webdemo.html" class="floating-btn">
+  <img src="imgs/back.png" alt="Floating Button" width="40px">
+</a>
+
+<script>
+  document.addEventListener("contextmenu", (e) =>{
+    e.preventDefault()
+    return false
+    
+  
+  })
+  document.addEventListener('keydown',(e) =>{
+    if(e.ctrlKey || e.keyCode ==123){
+      e.stopPropagation()
+      e.preventDefault()
+    }
+    })
+  </script>
+  </body>
+</html>

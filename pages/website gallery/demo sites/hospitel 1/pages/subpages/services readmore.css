@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Kaushan+Script&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+/*nav style*/
+.header-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  .header-nav::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  background: whitesmoke;
+    
+    z-index: -1;
+  }
+  
+  .header-nav a:hover{
+    color:black;
+    border-bottom-style:solid ; 
+   border-bottom-color:#f15b43 ;
+   transform: 1s;
+  }
+  
+  .logo{
+    font-size: 1.5rem;
+    color:black;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .navbar a{
+    font-size: 1.15rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 500 bold;
+    margin-left: 2.5rem;
+    transition: 0.6s;
+  
+  }
+  #check{
+    display: none;
+  }
+  .icons{
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display:none;
+  }
+  /*breakpoint*/
+  @media (max-width:992px) {
+    .header-nav{
+      padding: 1.3rem 5%;
+  
+    }
+    
+  }
+  @media (max-width:768px)
+  {
+  .icons{
+    display: inline-flex;
+  }
+  #check:checked~.icons #menu-icon{
+    display: none;
+  }
+  #check:checked~.icons #close-icon{
+    display: block;
+  }
+  .icons #close-icon{
+    display: none;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height:0;
+  background:whitesmoke;
+    
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0,.1);
+    transition: .3s ease;
+    overflow: hidden;
+  }
+  #check:checked~.navbar{
+   height: 17.7rem;
+  }
+  .navbar a{
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: .3s ease;
+  }
+  #check:checked~.navbar a{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay:calc(.15s * var(--i));
+  }
+  }
+  /*end*/
+
+
+
+
+/*about as */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #f0f0f0;
+}
+
+.wrapper{
+    width: 95%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5%;
+    margin-top: 10%;
+   
+    
+}
+@media  (max-width:1024px) {
+    .wrapper{
+      margin-top: 15%;
+    }
+}
+@media (max-width:768px) {
+    .container {
+        margin-top:20%;
+    }
+}
+@media (max-width:767px) {
+    .container {
+        margin-top:28%;
+    }
+}
+
+.content{
+    width: 100%;
+    margin: 0px 25px;
+    transition: 0.4s ease;
+  
+}
+.content:hover{
+    transform:translateY(-10px);
+}
+.content h2{
+    font-size: 30px;
+    color: #284966;
+
+}
+.content p{
+    color: #666;
+    font-size: 19px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+.content p span{
+  color: black;
+  font-size: 23px;
+
+}
+.content .btn{
+    position: relative;
+    margin-top: 30px;
+    text-decoration: none;
+    border: 2px solid #f15b43;
+    font-size: 19px;
+    color: #f15b43;
+    padding: 13px 16px;
+    display: inline-block;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+}
+.content .btn::before{
+    position: absolute;
+    content: "";
+    border: 1px solid transparent;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f15b43;
+    z-index: -1;
+    transition: transform 0.7s;
+    transform-origin:0 0;
+    transition-timing-function: cubic-bezier(0.5,1.5,0.4,0.7);
+    transform: scaleX(0);
+}
+.content .btn:hover{
+    color: #fff;
+}
+.content .btn:hover::before{
+    transform: scaleX(1);
+}
+.images img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+@media screen and (max-width:768px) 
+{
+    .wrapper{
+        flex-direction: column;
+        margin-top: 0px;
+
+    }
+    
+    .content, .image{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .content h2{
+        font-size: 25px;
+    }
+    .content .btn{
+        font-size: 16px;
+        padding: 12px 14px;
+    }
+    
+}
+
+
+
+
+
+/* Floating button styling */
+.floating-btn {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  right: 20px;  /* Distance from the right of the viewport */
+  width: 60px;  /* Width of the button */
+  height: 60px; /* Height of the button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Background color of the button */
+  border-radius: 50%; /* Makes the button circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+  text-decoration: none;
+  z-index: 1000; /* Ensures the button is above other content */
+}
+
+.floating-btn img {
+  width: 30px; /* Size of the icon */
+  height: 30px; /* Size of the icon */
+}
+
+/* Hover effect */
+.floating-btn:hover {
+  background-color: #b6b6b6; /* Darker color on hover */
+}
+
+

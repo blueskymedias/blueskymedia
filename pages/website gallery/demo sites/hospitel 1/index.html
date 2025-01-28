@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Banner with Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+ <!--navbar-->
+ 
+
+ <div class="header-nav" data-aos="fade-down">
+  <h1 href="" class="logo">Name hospital</h1>
+  <input type="checkbox" id="check">
+  <label for="check" class="icons">
+      <img src="menu icon.png" id="menu-icon" width="30px">
+      <img src="x icons.png" id="close-icon" width="30px">
+  </label>
+  <nav class="navbar">
+      <a href="index.html"style="--i:0;">Home</a>
+      <a href="pages/abouts.html"style="--i:1;">Abouts</a>
+      <a href="pages/team.html"style="--i:1;">Team</a>
+      <a href="pages/services.html"style="--i:3;">Services</a>
+      <a href="pages/contact.html"style="--i:4;">Contact</a>
+  </nav>
+</div>
+
+
+
+<!--hero-->
+  <div class="hero" data-aos="fade-right">
+    <div class="hero-content">
+      <h1>Your Title Here</h1>
+      <p>Some description or additional text can go here.</p>
+    </div>
+    <div class="hero-image" data-aos="fade-left">
+      <!-- Replace 'image.jpg' with your actual image file -->
+      <img src="images/aboutsimg.jpg" alt="Hero Image" width="75%">
+    </div>
+  </div>
+<!--about us-->
+    <div class="about-us">
+        <div class="container" data-aos="fade-right">
+            <div class="row">
+                <div class="flex">
+                    <h1>hospital name</h1>
+                    <h2>Discover our team s story</h2>
+                    <p>
+                      Welcome to [Hospital Name], where your dental health is our priority. We are dedicated to providing exceptional dental care in a comfortable and welcoming environment. Whether you're visiting us for a routine check-up or a more complex procedure, our experienced team is here to ensure you receive the highest quality of care.</p>
+
+                      <p>At [Hospital Name], we believe that a healthy smile is a gateway to overall well-being. As a leading dental hospital dedicated to providing exceptional care, we combine state-of-the-art technology with compassionate service to deliver unparalleled dental experiences for every patient.</p>
+                     
+                      <p>Founded on a commitment to excellence, our team of highly skilled dentists, specialists, and support staff work tirelessly to ensure that your oral health needs are met with precision and care. Whether you require routine check-ups, advanced treatments, or cosmetic dentistry, we are here to serve you.</p>
+                      <p>Located in [City/Location], [Hospital Name] is not just a place for treatments; it’s a trusted partner in your journey towards a brighter, healthier smile. Explore our comprehensive range of services designed to meet your unique dental needs and discover why thousands of patients choose us for their dental care.</p>
+
+                      <p>Your smile is our priority. Contact us today to schedule your appointment and experience the difference at [Hospital Name].</p>
+                    <div class="social-links" data-aos="fade-right">
+                         <a href=""><img src="images/353422_facebook_logo_icon.png" width="38px"></a>
+                         <a href=""><img src="images/1161954_instagram_icon.png" width="38px"></a>
+                         <a href=""><img src="images/353427_logo_twitter_icon.png" width="38px"></a>
+                    </div>
+                    <a href="" class="btn">learn more</a>
+                </div>
+                <div class="flex" data-aos="fade-left">
+                    <div class="about-img">
+                    <img src="images/aboutsimg.jpg" width="600px">
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--services section-->
+    
+   
+
+    <div class="container-services">
+      <h1 data-aos="zoom-In">Our Services</h1>
+      <div class="row-services" data-aos="fade-left">
+        <div class="service">
+        
+          <img src="images/medical-checkup.png" alt="" width="50px">
+
+         <img src="images/medical-checkup 2.png" alt="" width="50px" class="img-hover">
+        
+          <h2> Routine Checkups</h2>
+          <p>Regular exams and cleanings to maintain oral health. </p>
+        </div>
+        <div class="service">
+         
+          <img src="images/tooth-filling.png" alt="" width="50px">
+         <img src="images/tooth-filling 2.png" alt="" width="50px" class="img-hover">
+          <h2>Fillings</h2>
+          <p>Restorative treatment for cavities or tooth decay.</p>
+        </div>
+        
+        <div class="service">
+          <img src="images/tooth-extraction.png" alt="" width="50px">
+          <img src="images/tooth-extraction 2.png" alt="" width="50px" class="img-hover">
+          <h2>Extractions</h2>
+          <p>Removal of teeth due to decay, damage, or impaction.
+          </p>  
+        </div>
+
+        <div class="service">
+           <img src="images/bridge.png" alt="" width="50px">
+          <img src="images/bridge 2.png" alt="" width="50px" class="img-hover">
+          <h2>Crowns and Bridges</h2>
+          <p>Restorative solutions for damaged or missing teeth.
+          </p>
+        </div>
+
+        <div class="service">
+               <img src="images/denture.png" alt="" width="50px">
+          <img src="images/denture 2.png" alt="" width="50px" class="img-hover">
+          <h2>Dentures</h2>
+          <p> Removable prosthetics for tooth replacement.</p>
+        </div>
+        <div class="service">
+          <img src="images/root-canal.png" alt="" width="50px">
+          <img src="images/root-canal 2.png" alt="" width="50px" class="img-hover">
+          <h2>Root Canals</h2>
+          <p>Treatment for infected or abscessed teeth.  </p>
+        </div>
+        <div class="service">
+          <img src="images/tooth-whitening.png" alt="" width="50px">
+          <img src="images/tooth-whitening 2.png" alt="" width="50px" class="img-hover">
+          <h2>Teeth Whitening</h2>
+          <p>Cosmetic procedure for brightening tooth color. </p>
+
+        </div>
+        <div class="service">
+      <img src="images/braces.png" alt="" width="50px">
+          <img src="images/braces 2.png" alt="" width="50px" class="img-hover">
+          <h2>Orthodontics</h2>
+          <p> Braces or aligners for straightening teeth and aligning bites</p>
+        </div>
+
+        <div class="service">
+          <img src="images/dental-veneer.png" alt="" width="50px">
+          <img src="images/dental-veneer 2.png" alt="" width="50px" class="img-hover">
+          <h2>Veneers</h2>
+          <p>Thin layers for cosmetic tooth enhancement. </p>
+
+        </div>
+
+        <div class="service">
+          <img src="images/implant.png" alt="" width="50px">
+          <img src="images/implant 2.png" alt="" width="50px" class="img-hover">
+          <h2>Implants</h2>
+          <p>Surgical placement of artificial tooth roots </p>
+
+        </div>
+
+        <div class="service">
+          <img src="images/gums.png" alt="" width="50px">
+          <img src="images/gums 2.png" alt="" width="50px" class="img-hover">
+          <h2>Gum Treatment</h2>
+          <p>Care for periodontal disease and gum health.  </p>
+
+        </div>
+
+        <div class="service">
+          <img src="images/child.png" alt="" width="50px">
+          <img src="images/child 2.png" alt="" width="50px" class="img-hover">
+          <h2>Pediatric Dentistry</h2>
+          <p>Specialized care for children's oral health.
+          </p>
+
+        </div>
+
+        <div class="service">
+          <img src="images/dental-surgery.png" alt="" width="50px">
+          <img src="images/dental-surgery  2.png" alt="" width="50px" class="img-hover">
+          <h2>Oral Surgery</h2>
+          <p>Complex procedures like wisdom tooth removal.
+
+          </p>
+
+        </div>
+
+        <div class="service">
+          <img src="images/periodontal.png" alt="" width="50px">
+          <img src="images/periodontal 2.png" alt="" width="50px" class="img-hover">
+          <h2>Periodontal Maintenance:</h2>
+          <p>Ongoing care for gum health.
+
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <!--for appointment-->
+
+    <section class="header-appointment" data-aos="zoom-in">
+
+        <div class="section__container header__container">
+          <div class="header__content"data-aos="fade-right">
+            <h1>Providing an Exceptional Patient Experience</h1>
+            <p>
+              Welcome, where exceptional patient experiences are our priority.
+              With compassionate care, state-of-the-art facilities, and a
+              patient-centered approach, we're dedicated to your well-being. Trust
+              us with your health and experience the difference.
+            </p>
+            <button class="btn-appointment">See Services</button>
+          </div>
+          <div class="header__form" data-aos="fade-left">
+            <form>
+              <h4>Book Now</h4>
+              <input type="text" placeholder="First Name" />
+              <input type="text" placeholder="Last Name" />
+              <input type="text" placeholder="Address" />
+              <input type="text" placeholder="Phone No." />
+              <button class="btn form__btn">Book Appointment</button>
+            </form>
+          </div>
+        </div>
+    </section>
+
+<!--team section-->
+
+
+
+    
+<div class="container swiper" data-aos="fade-down">
+    <h1 class="team-h1">Our team</h1>
+     <div class="slide-container">
+       <div class="card-wrapper swiper-wrapper">
+         <div class="card swiper-slide">
+           <div class="image-box">
+             <img src="images/doctor 2.jpg" alt="" />
+           </div>
+           <div class="profile-details">
+             <div class="name-job">
+               <h3 class="name">Dr.sri ram</h3>
+               <h4 class="job">teeth</h4>
+             </div>
+           </div>
+         </div>
+         <div class="card swiper-slide">
+           <div class="image-box">
+           <img src="images/doctor 2.jpg" alt="" />
+           </div>
+           <div class="profile-details">
+             <div class="name-job">
+               <h3 class="name">Dr.sri ram</h3>
+               <h4 class="job">teeth</h4>
+             </div>
+           </div>
+         </div>
+         <div class="card swiper-slide">
+           <div class="image-box">
+           <img src="images/doctor 2.jpg" alt="" />
+           </div>
+           <div class="profile-details">
+             <div class="name-job">
+               <h3 class="name">Dr.sri ram</h3>
+               <h4 class="job">teeth</h4>
+             </div>
+           </div>
+         </div>
+         <div class="card swiper-slide">
+           <div class="image-box">
+           <img src="images/doctor 2.jpg" alt="" />
+           </div>
+           <div class="profile-details">
+             <div class="name-job">
+               <h3 class="name">Dr.sri ram</h3>
+               <h4 class="job">teeth</h4>
+             </div>
+           </div>
+         </div>
+         <div class="card swiper-slide">
+           <div class="image-box">
+           <img src="images/doctor 2.jpg" alt="" />
+           </div>
+           <div class="profile-details">
+             <div class="name-job">
+               <h3 class="name">Dr.sri ram</h3>
+               <h4 class="job">teeth</h4>
+             </div>
+           </div>
+         </div>
+       
+       </div>
+     </div>
+     <div class="swiper-button-next swiper-navBtn"></div>
+     <div class="swiper-button-prev swiper-navBtn"></div>
+     <div class="swiper-pagination"></div>
+   </div>
+
+   
+
+
+<!--review-->
+<section class="figure">
+<figure class="snip1157">
+  <blockquote>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.
+    <div class="arrow"></div>
+  </blockquote>
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample3.jpg" alt="sq-sample3" />
+  <div class="author">
+    <h5>Pelican Steve <span> LIttleSnippets.net</span></h5>
+  </div>
+</figure>
+<figure class="snip1157 hover">
+  <blockquote>Thank you. before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...When a report looks this good, you know it'll get an A. That's a tip kids. Write it down.
+    <div class="arrow"></div>
+  </blockquote>
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample27.jpg" alt="sq-sample27" />
+  <div class="author">
+    <h5>Max Conversion<span> LIttleSnippets.net</span></h5>
+  </div>
+</figure>
+
+<figure class="snip1157">
+  <blockquote>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.
+    <div class="arrow"></div>
+  </blockquote>
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample3.jpg" alt="sq-sample3" />
+  <div class="author">
+    <h5>Pelican Steve <span> LIttleSnippets.net</span></h5>
+  </div>
+</figure>
+
+<figure class="snip1157">
+  <blockquote>Calvin: You know sometimes when I'm talking, my words can't keep up with my thoughts... I wonder why we think faster than we speak. Hobbes: Probably so we can think twice.
+    <div class="arrow"></div>
+  </blockquote>
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample3.jpg" alt="sq-sample3" />
+  <div class="author">
+    <h5>Pelican Steve <span> LIttleSnippets.net</span></h5>
+  </div>
+</figure>
+
+</section>
+
+
+
+
+<!--footer-->
+
+
+
+
+  <footer data-aos="fade-up">
+    <div class="main-content">
+      <div class="left box-footer">
+        <h2>About us</h2>
+        <div class="content-footer">
+          <p>CodinNepal is a YouTube channel where you can learn web designing, web development, ui/ux designing, html css tutorial, hover animation and effects, javascript and jquery tutorial and related so on.</p>
+          <div class="social-footer">
+            <a href="https://facebook.com/coding.np"><span class="fab fa-facebook-f"></span></a>
+            <a href="#"><span class="fab fa-twitter"></span></a>
+            <a href="https://instagram.com/coding.np"><span class="fab fa-instagram"></span></a>
+            <a href="https://youtube.com/c/codingnepal"><span class="fab fa-youtube"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="center box-footer">
+        <h2>Address</h2>
+        <div class="content-footer">
+          <div class="place">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="text-footer">Birendranagar, Surkhet</span>
+          </div>
+          <div class="phone-footer">
+            <span class="fas fa-phone-alt"></span>
+            <span class="text-footer">+089-765432100</span>
+          </div>
+          <div class="email-footer">
+            <span class="fas fa-envelope"></span>
+            <span class="text-footer">abc@example.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="right box-footer">
+        <h2>Contact us</h2>
+        <div class="content-footer">
+          <form action="#">
+            <div class="email-footer">
+              <div class="text-footer">Email *</div>
+              <input type="email" required>
+            </div>
+            <div class="msg">
+              <div class="text-footer">Message *</div>
+              <textarea rows="2" cols="25" required></textarea>
+            </div>
+            <div class="btn-footer">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <center>
+        <span class="credit">Created By Praveen | </span>
+        <span class="far fa-copyright"></span><span> 2024 All rights reserved.</span>
+      </center>
+    </div>
+  </footer>
+
+   <script src="js/swiper-bundle.min.js"></script>
+   <script src="js/script.js"></script>
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init({
+       duration: 2500,
+       once: true,
+     });
+     </script>
+
+
+
+
+<a href="../../webdemo.html" class="floating-btn">
+  <img src="images/back.png" alt="Floating Button" width="40px">
+</a>
+
+<script>
+  document.addEventListener("contextmenu", (e) =>{
+    e.preventDefault()
+    return false
+    
+  
+  })
+  document.addEventListener('keydown',(e) =>{
+    if(e.ctrlKey || e.keyCode ==123){
+      e.stopPropagation()
+      e.preventDefault()
+    }
+    })
+  </script>
+
+</body>
+</html>
